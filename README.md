@@ -17,7 +17,7 @@ A simple and secure URL shortening service built using **Spring Boot**, **JWT-ba
 
 ## 🧭 Application Workflow
 
-![URL Shortener Diagram](diagram-export-15-07-2025-09_56_54.png)
+![URL Shortener Diagram](ProjectWorkfow.png)
 
 ---
 
