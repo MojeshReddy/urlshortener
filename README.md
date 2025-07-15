@@ -1,64 +1,119 @@
 # 🔗 URL Shortener — Spring Boot + HTML/CSS
 
-A secure and user-friendly URL shortener built using **Spring Boot**, **JWT authentication**, and a clean **HTML/CSS** frontend. It allows users to register, generate shortened URLs, view/manage them through a dashboard, and track redirections.
-
-![Project Logo](https://via.placeholder.com/150x80.png?text=Your+Logo+Here)
+A simple and secure URL shortening service built using **Spring Boot**, **JWT-based authentication**, and a clean modular architecture. Users can register/login, shorten URLs, manage them via a dashboard, and redirect securely to the original destination.
 
 ---
 
-## :ledger: Index
+## 📌 Features
 
-- [About](#beginner-about)
-- [Usage](#zap-usage)
-  - [Installation](#electric_plug-installation)
-  - [Commands](#package-commands)
-- [Development](#wrench-development)
-  - [Pre-Requisites](#notebook-pre-requisites)
-  - [Development Environment](#nut_and_bolt-development-environment)
-  - [File Structure](#file_folder-file-structure)
-  - [Build](#hammer-build)
-  - [Deployment](#rocket-deployment)
-- [Community](#cherry_blossom-community)
-  - [Contribution](#fire-contribution)
-  - [Branches](#cactus-branches)
-  - [Guideline](#exclamation-guideline)
-- [FAQ](#question-faq)
-- [Resources](#page_facing_up-resources)
-- [Gallery](#camera-gallery)
-- [Credit/Acknowledgment](#star2-creditacknowledgment)
-- [License](#lock-license)
+- ✅ User registration & login with JWT authentication  
+- 🔐 Secure endpoints via token-based access  
+- 🔗 Shorten URLs with unique aliases  
+- 📋 View & delete shortened URLs  
+- 🚀 Redirect to original URLs  
+- 🧪 Ready-to-run with Spring Boot  
 
 ---
 
-## :beginner: About
+## 🧭 Application Workflow
 
-This project is a simple and secure URL shortener service built using **Spring Boot**. It includes:
-- JWT-based authentication
-- Short URL generation and redirection
-- Dashboard for managing personal URLs
-- Clean, responsive UI with HTML/CSS
-
-The backend ensures authorization and secure data handling, while the frontend offers a minimal and intuitive interface.
+![URL Shortener Diagram](diagram-export-15-07-2025-09_56_54.png)
 
 ---
 
-## :zap: Usage
+## 📁 Project Structure
 
-### :electric_plug: Installation
+├── main
+│ ├── java
+│ │ └── com.example.urlshortener
+│ │ ├── config # SecurityConfig.java
+│ │ ├── controller # AuthController, UrlController, etc.
+│ │ ├── dto # AuthRequest, UrlResponse, UserDto, etc.
+│ │ ├── entity # User, Url
+│ │ ├── filter # JwtAuthFilter.java
+│ │ ├── repository # UserRepository, UrlRepository
+│ │ ├── service # JwtService, UrlService, UserDetailsServiceImpl
+│ │ ├── util # UrlshortenerApplication.java
+├── test
+│ └── java
+│ └── com.example.urlshortener
+│ └── UrlshortenerApplicationTests.java
+├── resources # Application properties & static files
+---
 
-Ensure you have the following installed:
+## 🛠️ Technologies Used
 
-- Java 17+
-- Maven 3.6+
-- Git
+- **Java 17+**  
+- **Spring Boot 3**  
+- **Spring Security + JWT**  
+- **Spring Data JPA**  
+- **Maven**  
+- **HTML/CSS (frontend)**  
+- **H2/PostgreSQL (configurable)**  
 
-Steps to run locally:
+---
+
+## ▶️ Getting Started
+
+### Prerequisites
+- Java 17 or later
+- Maven
+
+### Steps
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/urlshortener.git
+git clone https://github.com/yourusername/urlshortener.git
 cd urlshortener
 
-# Build and run the application
-./mvnw clean install
+# Run the application
 ./mvnw spring-boot:run
+🗃️ Database Entities
+User
+id
+
+username
+
+password
+
+role
+
+Url
+id
+
+shortUrl
+
+longUrl
+
+createdAt
+
+userId
+
+📬 Contribution Guide
+Fork this repo
+
+Create a new branch (git checkout -b feature/feature-name)
+
+Make your changes
+
+Push the branch (git push origin feature/feature-name)
+
+Open a Pull Request
+
+👥 Contributors
+💻 Team Name: Vibe Coders
+Gowtham
+
+Mojesh
+
+Anjali
+
+Gopika
+
+Swapnil
+
+📄 License
+This project is licensed under the MIT License.
+
+🙋‍♂️ Contact
+Have feedback or questions? Feel free to reach out or open an issue.
