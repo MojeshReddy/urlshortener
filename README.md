@@ -1,12 +1,9 @@
-Certainly! Below is a professional and comprehensive `README.md` sample for your URL Shortener project, incorporating your requested structure and referencing the attached project workflow image as the logo/diagram.
+
 
 # URL Shortener — Spring Boot + HTML/CSS
 
 
-  
 
-
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg](https://img.shields.io/b://spring.io/projects/spring.shields.io/badge/Java-17-orange.svgledger: Index
 
 - [About](#beginner-about)
 - [Usage](#zap-usage)
@@ -194,4 +191,3 @@ Licensed under the [MIT License](./LICENSE).
 
 *Last updated: July 15, 2025*
 
-[1] https://pplx-res.cloudinary.com/image/private/user_uploads/79798378/877fdcb7-5421-4fe6-988f-f9a458419186/ProjectWorkflow.jpg
