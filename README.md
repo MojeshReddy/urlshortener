@@ -1,3 +1,4 @@
+
 # 🔗 URL Shortener — Spring Boot + HTML/CSS
 
 A simple and secure URL shortening service built using **Spring Boot**, **JWT-based authentication**, and a clean modular architecture. Users can register/login, shorten URLs, manage them via a dashboard, and redirect securely to the original destination.
@@ -17,28 +18,32 @@ A simple and secure URL shortening service built using **Spring Boot**, **JWT-ba
 
 ## 🧭 Application Workflow
 
-![URL Shortener Diagram](ProjectWorkfow.png)
+![URL Shortener Diagram](diagram-export-15-07-2025-09_56_54.png)
 
 ---
 
 ## 📁 Project Structure
 
+```
+src
 ├── main
-│ ├── java
-│ │ └── com.example.urlshortener
-│ │ ├── config # SecurityConfig.java
-│ │ ├── controller # AuthController, UrlController, etc.
-│ │ ├── dto # AuthRequest, UrlResponse, UserDto, etc.
-│ │ ├── entity # User, Url
-│ │ ├── filter # JwtAuthFilter.java
-│ │ ├── repository # UserRepository, UrlRepository
-│ │ ├── service # JwtService, UrlService, UserDetailsServiceImpl
-│ │ ├── util # UrlshortenerApplication.java
+│   ├── java
+│   │   └── com.example.urlshortener
+│   │       ├── config                  # SecurityConfig.java
+│   │       ├── controller              # AuthController, UrlController, etc.
+│   │       ├── dto                     # AuthRequest, UrlResponse, UserDto, etc.
+│   │       ├── entity                  # User, Url
+│   │       ├── filter                  # JwtAuthFilter.java
+│   │       ├── repository              # UserRepository, UrlRepository
+│   │       ├── service                 # JwtService, UrlService, UserDetailsServiceImpl
+│   │       ├── util                    # UrlshortenerApplication.java
 ├── test
-│ └── java
-│ └── com.example.urlshortener
-│ └── UrlshortenerApplicationTests.java
-├── resources # Application properties & static files
+│   └── java
+│       └── com.example.urlshortener
+│           └── UrlshortenerApplicationTests.java
+├── resources                           # Application properties & static files
+```
+
 ---
 
 ## 🛠️ Technologies Used
@@ -68,52 +73,109 @@ cd urlshortener
 
 # Run the application
 ./mvnw spring-boot:run
-🗃️ Database Entities
-User
-id
+```
 
-username
+Access it at: `http://localhost:8080`
 
-password
+---
 
-role
+## 📮 REST API Endpoints
 
-Url
-id
+### 🧑‍💻 Auth
 
-shortUrl
+| Method | Endpoint             | Description           | Auth |
+|--------|----------------------|-----------------------|------|
+| POST   | `/api/auth/login`    | Login user            | ❌   |
+| POST   | `/api/auth/register` | Register new account  | ❌   |
 
-longUrl
+### 🔗 URL Actions
 
-createdAt
+| Method | Endpoint         | Description              | Auth |
+|--------|------------------|--------------------------|------|
+| POST   | `/api/url`       | Create short URL         | ✅   |
+| GET    | `/api/url`       | Get user’s URLs          | ✅   |
+| DELETE | `/api/url/{id}`  | Delete specific short URL| ✅   |
 
-userId
+### 🚀 Redirect
 
-📬 Contribution Guide
-Fork this repo
+| Method | Endpoint          | Description              | Auth |
+|--------|-------------------|--------------------------|------|
+| GET    | `/{shortUrl}`     | Redirect to original URL | ❌   |
 
-Create a new branch (git checkout -b feature/feature-name)
+---
 
-Make your changes
+## 🧪 Running Tests
 
-Push the branch (git push origin feature/feature-name)
+```bash
+./mvnw test
+```
 
-Open a Pull Request
+---
 
-👥 Contributors
-💻 Team Name: Vibe Coders
-Gowtham
+## 🧩 Example DTOs (Data Transfer Objects)
 
-Mojesh
+```json
+// AuthRequest
+{
+  "username": "testuser",
+  "password": "password123"
+}
 
-Anjali
+// UrlCreateRequest
+{
+  "longUrl": "https://example.com/very/long/url"
+}
+```
 
-Gopika
+---
 
-Swapnil
+## 🗃️ Database Entities
 
-📄 License
-This project is licensed under the MIT License.
+### `User`
+- `id`
+- `username`
+- `password`
+- `role`
 
-🙋‍♂️ Contact
+### `Url`
+- `id`
+- `shortUrl`
+- `longUrl`
+- `createdAt`
+- `userId`
+
+---
+
+## 📬 Contribution Guide
+
+1. Fork this repo  
+2. Create a new branch (`git checkout -b feature/feature-name`)  
+3. Make your changes  
+4. Push the branch (`git push origin feature/feature-name`)  
+5. Open a Pull Request  
+
+---
+
+## 👥 Contributors
+
+### 💻 Team Name: **Vibe Coders**
+
+- Gowtham  
+- Mojesh  
+- Anjali  
+- Gopika  
+- Swapnil  
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🙋‍♂️ Contact
+
 Have feedback or questions? Feel free to reach out or open an issue.
+
+---
