@@ -170,7 +170,7 @@ Feature branches should start from `stage` and be merged via PRs.
 
 ## :camera: Gallery
 
-![Workflow Diagram](https://pplx-res.cloudinary.com/image/private/user_uploads/79798378/877fdcb7-5421-4fe6-988f-f9a458419186/Project workflow with authentication, dashboard, and redirection logic*
+![Workflow Diagram] ./ProjectWorkFlow.png workflow with authentication, dashboard, and redirection logic*
 
 ## :star2: Credit/Acknowledgment
 
