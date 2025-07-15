@@ -29,14 +29,14 @@ src
 ├── main
 │   ├── java
 │   │   └── com.example.urlshortener
-│   │       ├── config                  # SecurityConfig.java
+│   │       ├── config                  # SecurityConfig
 │   │       ├── controller              # AuthController, UrlController, etc.
 │   │       ├── dto                     # AuthRequest, UrlResponse, UserDto, etc.
 │   │       ├── entity                  # User, Url
 │   │       ├── filter                  # JwtAuthFilter.java
 │   │       ├── repository              # UserRepository, UrlRepository
 │   │       ├── service                 # JwtService, UrlService, UserDetailsServiceImpl
-│   │       ├── util                    # UrlshortenerApplication.java
+│   │       ├── util                    # UrlshortenerApplication
 ├── test
 │   └── java
 │       └── com.example.urlshortener
@@ -48,13 +48,13 @@ src
 
 ## 🛠️ Technologies Used
 
-- **Java 17+**  
+- **Java 21+**  
 - **Spring Boot 3**  
 - **Spring Security + JWT**  
 - **Spring Data JPA**  
 - **Maven**  
 - **HTML/CSS (frontend)**  
-- **H2/PostgreSQL (configurable)**  
+- **MariaDB (configurable)**  
 
 ---
 
@@ -135,12 +135,11 @@ Access it at: `http://localhost:8080`
 - `id`
 - `username`
 - `password`
-- `role`
 
 ### `Url`
 - `id`
 - `shortUrl`
-- `longUrl`
+- `originalUrl`
 - `createdAt`
 - `userId`
 
